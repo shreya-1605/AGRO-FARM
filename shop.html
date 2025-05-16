@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Agro Farm</title>
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <p>Agro Farm - Your Farming Partner!</p>
+    </div>
+    <div class="top-bar-right">
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+      <a href="account.html"><i class="fas fa-user"></i> My Account</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="frontend.html">
+        <img src="images/logo1.png" alt="Agro Farm Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search seeds, pesticides, and more">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <ul>
+      <li><a href="frontend.html" id="home-text">Home</a></li>
+      <li><a href="shop.html" id="shop-text">Shop</a></li>
+      <li><a href="about.html" id="about-us-text">About Us</a></li>
+      <li><a href="contact.html" id="contact-text">Contact</a></li>
+      <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-text">Cart</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Filter Toggle Button -->
+<button class="filter-toggle-btn" onclick="toggleFilterPanel()">
+  <i class="fas fa-filter"></i> Filters
+</button>
+ <!-- Side Filter Panel -->
+<div class="filter-panel" id="filterPanel">
+  <h3>Filters</h3>
+  <div class="filter-option">
+    <h4>Price</h4>
+    <input type="range" id="priceRange" min="0" max="1000" value="1000">
+    <p>Max Price: ₹<span id="priceValue">1000</span></p>
+  </div>
+  <div class="filter-option">
+    <h4>Brands</h4>
+    <select id="brandFilter">
+      <option value="all">All Brands</option>
+      <!-- Brands will be dynamically added here -->
+    </select>
+  </div>
+  <div class="filter-option">
+    <h4>Sort By</h4>
+    <select id="sortBy">
+      <option value="default">Default</option>
+      <option value="priceLowToHigh">Price: Low to High</option>
+      <option value="priceHighToLow">Price: High to Low</option>
+      <option value="nameAtoZ">Name: A to Z</option>
+      <option value="nameZtoA">Name: Z to A</option>
+    </select>
+  </div>
+  <div class="filter-option">
+    <h4>Category</h4>
+    <div class="category-buttons">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="vegetable & fruit seeds">Vegetable & Fruit Seeds</button>
+      <button class="filter-btn" data-category="Farm machinery">Farm Machinery</button>
+      <button class="filter-btn" data-category="insecticides">Insecticides</button>
+      <button class="filter-btn" data-category="crop nutrients">Crop Nutrients</button>
+    </div>
+  </div>
+</div>
+
+  <!-- All Products Section -->
+  <section class="all-products">
+    <h2>All Products</h2>
+    <div class="product-grid">
+      <!-- Products will be dynamically added here -->
+    </div>
+  </section>
+
+  <!-- Chat Bot -->
+  <div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+      <i class="fas fa-headset"></i> <!-- Headphone icon -->
+    </div>
+    <div class="chatbot-popup" id="chatbotPopup">
+      <button onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+      </button>
+      <button onclick="openFAQ()">
+        <i class="fas fa-question-circle"></i> FAQ
+      </button>
+    </div>
+  </div>
+
+  <!-- Voice Assistant Button -->
+  <div class="voice-assistant-container">
+    <div class="voice-assistant-icon" onclick="toggleVoiceAssistant()">
+      <i class="fas fa-microphone"></i> <!-- Microphone icon -->
+    </div>
+    <div class="voice-assistant-popup" id="voiceAssistantPopup">
+      <p id="voice-assistant-response">मुझसे हिंदी में बोलें...</p>
+      <button onclick="startVoiceAssistant()">
+        <i class="fas fa-microphone"></i> बोलना शुरू करें
+      </button>
+    </div>
+  </div>
+
+  <script src="js/voiceAssistant.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

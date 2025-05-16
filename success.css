@@ -1,0 +1,79 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px; /* Added padding to prevent overflow on small screens */
+}
+
+.success-container {
+  text-align: center;
+  background-color: white;
+  padding: 20px; /* Reduced padding to make the container more compact */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Reduced max-width for a more compact look */
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.success-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Container */
+.video-container {
+  margin-bottom: 15px; /* Reduced margin for compactness */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Message Section */
+h1 {
+  font-size: 2rem; /* Reduced font size for compactness */
+  color: #4CAF50;
+  margin-bottom: 10px; /* Reduced margin for compactness */
+}
+
+p {
+  font-size: 1rem; /* Reduced font size for compactness */
+  color: #333;
+  margin-bottom: 15px; /* Reduced margin for compactness */
+  line-height: 1.5;
+}
+
+/* Shop More Button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Reduced padding for compactness */
+  border-radius: 5px;
+  font-size: 1rem; /* Reduced font size for compactness */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+button i {
+  font-size: 1rem; /* Reduced icon size for compactness */
+}

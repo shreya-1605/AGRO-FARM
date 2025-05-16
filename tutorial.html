@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ट्यूटोरियल - एग्रो फार्म</title>
+  <link rel="stylesheet" href="css/tutorial.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="tutorial-container">
+    <h1>वेबसाइट के बारे में जानकारी</h1>
+    <div class="website-info">
+      <p>
+        एग्रो फार्म एक ऑनलाइन प्लेटफॉर्म है जो किसानों और खेती से जुड़े लोगों को उच्च गुणवत्ता वाले बीज, उर्वरक, और कीटनाशक उपलब्ध कराता है। हमारा मकसद किसानों को आधुनिक तकनीक और बेहतर उत्पादों से जोड़कर उनकी पैदावार को बढ़ाना है। हमने कई बड़ी कंपनियों के साथ टाई-अप किया है, जैसे कि मोंसेंटो, सिंजेंटा, और बायर, ताकि हमारे ग्राहकों को सर्वोत्तम उत्पाद मिल सकें।
+      </p>
+      <p>
+        हमारी वेबसाइट पर आप आसानी से उत्पादों को ब्राउज़ कर सकते हैं, उन्हें कार्ट में जोड़ सकते हैं, और सुरक्षित भुगतान के माध्यम से खरीदारी कर सकते हैं। हम क्रेडिट कार्ड, डेबिट कार्ड, और UPI जैसे भुगतान विकल्प स्वीकार करते हैं। हमारी टीम आपकी हर समस्या का समाधान करने के लिए हमेशा तैयार है।
+      </p>
+    </div>
+
+    <h2>वेबसाइट का उपयोग कैसे करें</h2>
+    <div class="tutorial-steps">
+      <div class="step">
+        <div class="step-icon">
+          <i class="fas fa-user-plus"></i>
+        </div>
+        <div class="step-content">
+          <h3>1. साइन अप करें</h3>
+          <p>नए उपयोगकर्ता के लिए, साइन अप फॉर्म भरें। अपना नाम, फोन नंबर, और पासवर्ड दर्ज करें।</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">
+          <i class="fas fa-sign-in-alt"></i>
+        </div>
+        <div class="step-content">
+          <h3>2. लॉग इन करें</h3>
+          <p>अपने यूजरनेम और पासवर्ड से लॉग इन करें। अगर आप पासवर्ड भूल गए हैं, तो "पासवर्ड भूल गए" विकल्प का उपयोग करें।</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">
+          <i class="fas fa-store"></i>
+        </div>
+        <div class="step-content">
+          <h3>3. उत्पाद देखें</h3>
+          <p>'दुकान' पर जाएं और उत्पादों को ब्राउज़ करें। आप बीज, उर्वरक, और कीटनाशक देख सकते हैं।</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">
+          <i class="fas fa-cart-plus"></i>
+        </div>
+        <div class="step-content">
+          <h3>4. कार्ट में जोड़ें</h3>
+          <p>उत्पादों को कार्ट में जोड़ें और चेकआउट करें। कार्ट में आप अपने सभी चुने हुए उत्पाद देख सकते हैं।</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">
+          <i class="fas fa-credit-card"></i>
+        </div>
+        <div class="step-content">
+          <h3>5. भुगतान करें</h3>
+          <p>अपना पता और भुगतान विवरण दर्ज करें। हम क्रेडिट कार्ड, डेबिट कार्ड, और UPI स्वीकार करते हैं।</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="step-content">
+          <h3>6. सहायता</h3>
+          <p>किसी भी समस्या के लिए हमारे चैटबॉट या वॉइस असिस्टेंट का उपयोग करें। हमारी टीम आपकी मदद के लिए हमेशा तैयार है।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Voice Assistant Button -->
+<div class="voice-assistant-container">
+    <div class="voice-assistant-icon" onclick="toggleVoiceAssistant()">
+      <i class="fas fa-microphone"></i> <!-- Microphone icon -->
+    </div>
+    <div class="voice-assistant-popup" id="voiceAssistantPopup">
+      <p id="voice-assistant-response">मुझसे हिंदी में बोलें...</p>
+      <button onclick="startVoiceAssistant()">
+        <i class="fas fa-microphone"></i> बोलना शुरू करें
+      </button>
+    </div>
+  </div>
+    <script src="js/voiceAssistant.js"></script>
+
+</body>
+</html>

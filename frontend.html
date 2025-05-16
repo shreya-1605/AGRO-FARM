@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Farm E-Commerce</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <p id="top-bar-text"> Agro Farm - Your Farming Partner!</p>
+    </div>
+    <div class="top-bar-right">
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+      <a href="account.html"><i class="fas fa-user"></i> <span id="my-account-text">My Account</span></a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="frontend.html"></a>
+      <img src="images/logo1.png" alt="Agro Farm Logo" class="logo-img">
+    </div>
+    <ul>
+      <li><a href="frontend.html" id="home-text">Home</a></li>
+      <li><a href="shop.html" id="shop-text">Shop</a></li>
+      <li><a href="about.html" id="about-us-text">About Us</a></li>
+      <li><a href="contact.html" id="contact-text">Contact</a></li>
+      <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-text">Cart</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Slider -->
+  <section class="hero">
+    <div class="slider">
+      <div class="slide active">
+        <img src="images/main slide.jpg" alt="Farm Image 1">
+      </div>
+      <div class="slide">
+        <img src="images/2nd slide.jpg" alt="Farm Image 2">
+      </div>
+      <div class="slide">
+        <img src="images/slide.jpg" alt="Farm Image 3">
+      </div>
+      <div class="slide">
+        <img src="images/slider.jpg" alt="Farm Image 4">
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 id="welcome-text">Welcome to Agro Farm</h1>
+      <p id="tagline-text">From Farm to Future – Grow with Us!</p>
+      <a href="shop.html" class="btn" id="explore-products-text">Explore Products</a>
+    </div>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="our-services">
+    <h2 id="our-services-text">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/agricultural products.jpg" alt="Best Agricultural Products">
+        <div class="service-content">
+          <h3 id="best-products-text">Best Agricultural Products</h3>
+          <p id="best-products-desc">We provide high-quality seeds, fertilizers, and pesticides to ensure the best yield for your crops.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/Farming Equipment.jpg" alt="Farm Equipment">
+        <div class="service-content">
+          <h3 id="farm-equipment-text">Farm Equipment</h3>
+          <p id="farm-equipment-desc">Get access to the latest farm machinery and tools to make your farming more efficient.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/expert advice.jpg" alt="Expert Advice">
+        <div class="service-content">
+          <h3 id="expert-advice-text">Expert Advice</h3>
+          <p id="expert-advice-desc">Our team of agricultural experts is always ready to guide you with the best farming practices.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/delivery.jpg" alt="Fast Delivery">
+        <div class="service-content">
+          <h3 id="fast-delivery-text">Fast Delivery</h3>
+          <p id="fast-delivery-desc">We ensure timely delivery of products to your farm, so you never face any delays in your farming activities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2 id="shop-by-category-text">Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card" onclick="redirectToCategory('vegetable & fruit seeds')">
+        <img src="images/seeds.jpg" alt="Seeds">
+        <h3 id="seeds-text">Seeds</h3>
+        <p id="seeds-desc">High-quality seeds for all crops.</p>
+      </div>
+      <div class="category-card" onclick="redirectToCategory('Farm machinery')">
+        <img src="images/crop production.jpg" alt="Crop Production">
+        <h3 id="farm-machinery-text">Farm Machinery</h3>
+        <p id="farm-machinery-desc">Tools and equipment for better yield.</p>
+      </div>
+      <div class="category-card" onclick="redirectToCategory('crop nutrients')">
+        <img src="images/crop nutrients.jpg" alt="Crop Nutrition">
+        <h3 id="crop-nutrition-text">Crop Nutrition</h3>
+        <p id="crop-nutrition-desc">Fertilizers and nutrients for healthy crops.</p>
+      </div>
+      <div class="category-card" onclick="redirectToCategory('insecticides')">
+        <img src="images/plants.jpg" alt="Plants">
+        <h3 id="insecticides-text">Insecticides</h3>
+        <p id="insecticides-desc">Healthy plants for your farm.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products">
+    <h2 id="featured-products-text">Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="redirectToProduct('knapsack-sprayer')">
+        <img src="images/knapsack sprayer.avif" alt="Product 1">
+        <h3>Farm sprayer</h3>
+        <p>₹1350</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card" onclick="redirectToProduct('avocado-seed')">
+        <img src="images/avocado seed.jpg" alt="Product 2">
+        <h3>Avocado seed</h3>
+        <p>₹30/kg</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card" onclick="redirectToProduct('agri-car')">
+        <img src="images/agri car.jpg" alt="Product 3">
+        <h3>Agri car</h3>
+        <p>₹520</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card" onclick="redirectToProduct('beetroot-seeds')">
+        <img src="images/beetroot seeds.avif" alt="Product 4">
+        <h3>beetroot seeds</h3>
+        <p>₹770/kg</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2 id="testimonials-text">What Our Customers Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Agro Farm has been a game-changer for my farming business. The quality of seeds and fertilizers is unmatched!"</p>
+        <h4>- Rajesh Kumar</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"I love how easy it is to order and get everything delivered to my farm. Highly recommended!"</p>
+        <h4>- Priya Sharma</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The best platform for farmers. Great prices and excellent customer service."</p>
+        <h4>- Anil Patel</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 id="about-us-footer-text">About Us</h3>
+        <p id="about-us-desc">Agro Farm is dedicated to providing high-quality agricultural products to farmers and helping them achieve success.</p>
+      </div>
+      <div class="footer-section">
+        <h3 id="quick-links-text">Quick Links</h3>
+        <ul>
+          <li><a href="frontend.html" id="home-footer-text">Home</a></li>
+          <li><a href="shop.html" id="shop-footer-text">Shop</a></li>
+          <li><a href="about.html" id="about-us-footer-link">About Us</a></li>
+          <li><a href="contact.html" id="contact-footer-text">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 id="contact-us-text">Contact Us</h3>
+        <p>Email: supportagrofarm@gmail.com</p>
+        <p>Phone: +91 8370023455</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footer-text">&copy; 2025 Agro Farm. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chat Bot -->
+  <div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+      <i class="fas fa-headset"></i> <!-- Headphone icon -->
+    </div>
+    <div class="chatbot-popup" id="chatbotPopup">
+      <button onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i> <span id="whatsapp-chat-text">Chat with us on WhatsApp</span>
+      </button>
+      <button onclick="openFAQ()">
+        <i class="fas fa-question-circle"></i> <span id="faq-text">FAQ</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Voice Assistant Button -->
+  <div class="voice-assistant-container">
+    <div class="voice-assistant-icon" onclick="toggleVoiceAssistant()">
+      <i class="fas fa-microphone"></i> <!-- Microphone icon -->
+    </div>
+    <div class="voice-assistant-popup" id="voiceAssistantPopup">
+      <p id="voice-assistant-response">मुझसे हिंदी में बोलें...</p>
+      <button onclick="startVoiceAssistant()">
+        <i class="fas fa-microphone"></i> बोलना शुरू करें
+      </button>
+    </div>
+  </div>
+
+  <script src="js/voiceAssistant.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/language.js"></script> <!-- Add this line for language change functionality -->
+</body>
+</html>

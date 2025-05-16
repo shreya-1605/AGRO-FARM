@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Agro Farm</title>
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/chatbot.css"> <!-- Include chatbot.css -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <p>Welcome to Agro Farm - Your Farming Partner!</p>
+    </div>
+    <div class="top-bar-right">
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+      <a href="account.html"><i class="fas fa-user"></i> My Account</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="frontend.html">
+        <img src="images/logo1.png" alt="Agro Farm Logo" class="logo-img">
+      </a>
+    </div>
+    <!-- Search Bar Removed -->
+    <ul>
+      <li><a href="frontend.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="faq-content">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Q: How do I place an order? <i class="fas fa-chevron-down"></i></h3>
+        <p>A: You can place an order by browsing our products and adding them to your cart. Once you're ready, proceed to checkout.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q: What payment methods do you accept? <i class="fas fa-chevron-down"></i></h3>
+        <p>A: We accept all major credit/debit cards, UPI, and net banking.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q: How can I track my order? <i class="fas fa-chevron-down"></i></h3>
+        <p>A: Once your order is shipped, you will receive a tracking link via email or SMS.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q: What is your return policy? <i class="fas fa-chevron-down"></i></h3>
+        <p>A: We offer a 7-day return policy for most products. Please check the product page for specific details.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q: How do I contact customer support? <i class="fas fa-chevron-down"></i></h3>
+        <p>A: You can contact us via WhatsApp or email at support@agrofarm.com.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Agro Farm is dedicated to providing high-quality agricultural products to farmers and helping them achieve success.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="frontend.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: support@agrofarm.com</p>
+        <p>Phone: +91 8370023455</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Agro Farm. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chat Bot -->
+  <div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+      <i class="fas fa-headset"></i> <!-- Headphone icon -->
+    </div>
+    <div class="chatbot-popup" id="chatbotPopup">
+      <button onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+      </button>
+      <button onclick="openFAQ()">
+        <i class="fas fa-question-circle"></i> FAQ
+      </button>
+    </div>
+  </div>
+ <!-- Voice Assistant Button -->
+ <div class="voice-assistant-container">
+  <div class="voice-assistant-icon" onclick="toggleVoiceAssistant()">
+    <i class="fas fa-microphone"></i> <!-- Microphone icon -->
+  </div>
+  <div class="voice-assistant-popup" id="voiceAssistantPopup">
+    <p id="voice-assistant-response">मुझसे हिंदी में बोलें...</p>
+    <button onclick="startVoiceAssistant()">
+      <i class="fas fa-microphone"></i> बोलना शुरू करें
+    </button>
+  </div>
+</div>
+
+<script src="js/voiceAssistant.js"></script>
+  <!-- JavaScript for FAQ Toggle -->
+  <script>
+    // Add click event to FAQ items
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <!-- Include Chat Bot -->
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

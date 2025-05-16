@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Agro Farm</title>
+  <link rel="stylesheet" href="css/about.css"> <!-- About Us specific CSS -->
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <p>Welcome to Agro Farm - Your Farming Partner!</p>
+    </div>
+    <div class="top-bar-right">
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+      <a href="account.html"><i class="fas fa-user"></i> My Account</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="frontend.html">
+        <img src="images/logo1.png" alt="Agro Farm Logo" class="logo-img">
+      </a>
+    </div>
+    <!-- Search Bar Removed -->
+    <ul>
+      <li><a href="frontend.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Us Section -->
+  <section class="about-us">
+    <div class="container">
+      <!-- Language Toggle Button -->
+      <div class="language-toggle">
+        <button onclick="toggleLanguage()">Switch to Hindi</button>
+      </div>
+
+      <!-- English Content -->
+      <div id="english-content">
+        <h1>About Us</h1>
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Our Story</h2>
+            <p>
+              Agro Farm started in 2010 as a small farm. Our main goal is to deliver fresh, healthy, and organic products directly from the farm to your home. Today, we work with a large network and provide natural and nutritious products to thousands of customers.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="images/farm-story.jpg" alt="Our Story">
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>
+              Our mission is to provide every family with pure and natural products. We promote organic farming and use environmentally friendly methods. Our goal is to offer the best quality products at affordable prices.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="images/farm-mission.jpg" alt="Our Mission">
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Our Team</h2>
+            <p>
+              Our team includes agricultural experts, scientists, and experienced farmers who work hard every day to bring you the best products. Every member of our team is dedicated to natural farming and environmental conservation.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="images/farm-team.jpg" alt="Our Team">
+          </div>
+        </div>
+      </div>
+
+      <!-- Hindi Content (Hidden by Default) -->
+      <div id="hindi-content" class="hidden">
+        <h1>हमारे बारे में</h1>
+        <div class="about-content">
+          <div class="about-text">
+            <h2>हमारी कहानी</h2>
+            <p>
+              एग्रो फार्म की शुरुआत 2010 में एक छोटे से फार्म के रूप में हुई थी। हमारा मुख्य उद्देश्य ताज़ा, स्वस्थ और ऑर्गेनिक उत्पादों को सीधे खेत से आपके घर तक पहुंचाना है। आज, हम एक बड़े नेटवर्क के साथ काम कर रहे हैं और हजारों ग्राहकों को प्राकृतिक और पौष्टिक उत्पाद प्रदान कर रहे हैं।
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="images/farm-story.jpg" alt="हमारी कहानी">
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h2>हमारा मिशन</h2>
+            <p>
+              हमारा मिशन है कि हर परिवार को शुद्ध और प्राकृतिक उत्पाद मिलें। हम जैविक खेती को बढ़ावा देते हैं और पर्यावरण के अनुकूल तरीकों से खेती करते हैं। हमारा लक्ष्य है कि हमारे ग्राहकों को सबसे अच्छी गुणवत्ता वाले उत्पाद सस्ती कीमत पर मिलें।
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="images/farm-mission.jpg" alt="हमारा मिशन">
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h2>हमारी टीम</h2>
+            <p>
+              हमारी टीम में कृषि विशेषज्ञ, वैज्ञानिक और अनुभवी किसान शामिल हैं जो हर दिन मेहनत करते हैं ताकि आपको सबसे अच्छे उत्पाद मिल सकें। हमारी टीम का हर सदस्य प्राकृतिक खेती और पर्यावरण संरक्षण के प्रति समर्पित है।
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="images/farm-team.jpg" alt="हमारी टीम">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Agro Farm is dedicated to providing high-quality agricultural products to farmers and helping them achieve success.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="frontend.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: support@agrofarm.com</p>
+        <p>Phone: +91 12345 67890</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Agro Farm. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chat Bot -->
+  <div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+      <i class="fas fa-headset"></i> <!-- Headphone icon -->
+    </div>
+    <div class="chatbot-popup" id="chatbotPopup">
+      <button onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+      </button>
+      <button onclick="openFAQ()">
+        <i class="fas fa-question-circle"></i> FAQ
+      </button>
+    </div>
+  </div>
+
+  <script src="js/chatbot.js"></script>
+  <script src="js/about.js"></script> <!-- JavaScript for Hindi-English toggle -->
+</body>
+</html>

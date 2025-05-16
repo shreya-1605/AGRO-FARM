@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Agro Farm</title>
+  <link rel="stylesheet" href="css/cart.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <p>Agro Farm - Your Farming Partner!</p>
+    </div>
+    <div class="top-bar-right">
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+      <a href="account.html"><i class="fas fa-user"></i> My Account</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="frontend.html">
+        <img src="images/logo1.png" alt="Agro Farm Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search seeds, pesticides, and more">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <ul>
+      <li><a href="frontend.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cart Section -->
+  <section class="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-summary">
+      <h3>Cart Summary</h3>
+      <p>Total Items: <span id="total-items">0</span></p>
+      <p>Total Price: ₹<span id="total-price">0</span></p>
+      <button id="proceed-to-checkout">Proceed to Checkout</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Agro Farm. All rights reserved.</p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

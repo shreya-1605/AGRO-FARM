@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Agro Farm</title>
+  <link rel="stylesheet" href="css/product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Bar, Navbar, etc. (same as before) -->
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <p>Agro Farm - Your Farming Partner!</p>
+    </div>
+    <div class="top-bar-right">
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+      <a href="account.html"><i class="fas fa-user"></i> My Account</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="frontend.html">
+        <img src="images/logo1.png" alt="Agro Farm Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search seeds, pesticides, and more">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <ul>
+      <li><a href="frontend.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <!-- Product Details Section -->
+  <section class="product-details">
+    <div class="product-container">
+      <div class="product-image">
+        <img id="product-image" src="" alt="Product Image">
+      </div>
+      <div class="product-info">
+        <h1 id="product-name"></h1>
+        <p class="price" id="product-price"></p>
+        <p class="description" id="product-description"></p>
+        <div class="quantity">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" value="1" min="1" onchange="updateTotalPrice()">
+        </div>
+        <p>Total Price: ₹<span id="total-price">0</span></p>
+        <button id="add-to-cart">Add to Cart</button>
+        <button id="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voice Assistant Button -->
+  <div class="voice-assistant-container">
+    <div class="voice-assistant-icon" onclick="toggleVoiceAssistant()">
+      <i class="fas fa-microphone"></i> <!-- Microphone icon -->
+    </div>
+    <div class="voice-assistant-popup" id="voiceAssistantPopup">
+      <p id="voice-assistant-response">मुझसे हिंदी में बोलें...</p>
+      <button onclick="startVoiceAssistant()">
+        <i class="fas fa-microphone"></i> बोलना शुरू करें
+      </button>
+    </div>
+  </div>
+
+  <script src="js/voiceAssistant.js"></script>
+
+  <!-- Footer (same as before) -->
+
+  <script src="js/shop.js"></script>
+  <script>
+    // Function to update total price based on quantity
+    function updateTotalPrice() {
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const price = parseFloat(document.getElementById('product-price').textContent.replace('₹', ''));
+      const totalPrice = quantity * price;
+      document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+    }
+
+    // Display product details on page load
+    window.onload = () => {
+      const productName = localStorage.getItem('productName');
+      const productPrice = localStorage.getItem('productPrice');
+      const productDescription = localStorage.getItem('productDescription');
+      const productImage = localStorage.getItem('productImage');
+
+      document.getElementById('product-name').textContent = productName;
+      document.getElementById('product-price').textContent = productPrice;
+      document.getElementById('product-description').textContent = productDescription;
+      document.getElementById('product-image').src = productImage;
+
+      // Update total price initially
+      updateTotalPrice();
+
+      // Add to Cart Button
+      document.getElementById('add-to-cart').addEventListener('click', () => {
+        const productId = Object.keys(products).find(key => products[key].name === productName);
+        const quantity = parseInt(document.getElementById('quantity').value);
+        if (productId) {
+          addToCart(productId, quantity); // Pass quantity to addToCart function
+        }
+      });
+
+      // Buy Now Button
+document.getElementById('buy-now').addEventListener('click', () => {
+  const productId = Object.keys(products).find(key => products[key].name === productName);
+  const quantity = parseInt(document.getElementById('quantity').value);
+
+  if (productId) {
+    // Save product details in localStorage for checkout
+    localStorage.setItem('buyNowProduct', JSON.stringify({
+      id: productId,
+      name: productName,
+      price: productPrice,
+      quantity: quantity,
+      image: productImage
+    }));
+
+    // Clear the cart (if any) for Buy Now flow
+    localStorage.removeItem('cart');
+
+    // Redirect to checkout.html
+    window.location.href = 'checkout.html';
+  }
+});
+    };
+  </script>
+</body>
+</html>

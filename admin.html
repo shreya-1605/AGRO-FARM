@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Agro Farm</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel - Manage Products</h1>
+  </header>
+
+  <main>
+    <section class="add-product-section">
+      <h2>Add New Product</h2>
+      <form id="add-product-form">
+        <div class="form-group">
+          <label for="product-name">Product Name:</label>
+          <input type="text" id="product-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="product-price">Product Price:</label>
+          <input type="text" id="product-price" required>
+        </div>
+
+        <div class="form-group">
+          <label for="product-description">Product Description:</label>
+          <textarea id="product-description" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="product-image">Product Image:</label>
+          <input type="file" id="product-image" accept="image/*" required>
+          <div id="image-preview"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="product-category">Product Category:</label>
+          <select id="product-category" required>
+            <option value="vegetable & fruit seeds">Vegetable & Fruit Seeds</option>
+            <option value="Farm machinery">Farm Machinery</option>
+            <option value="insecticides">Insecticides</option>
+            <option value="crop nutrients">Crop Nutrients</option>
+          </select>
+        </div>
+
+        <button type="submit">Add Product</button>
+      </form>
+    </section>
+
+    <section class="manage-products-section">
+      <h2>Manage Products</h2>
+      <div id="products-list">
+        <!-- Products will be dynamically added here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Discount Popup -->
+  <div id="discount-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 1000;">
+    <h3>Add Discount</h3>
+    <input type="number" id="discount-percentage" placeholder="Discount Percentage">
+    <button onclick="applyDiscountToProduct()">Apply</button>
+    <button onclick="closeDiscountPopup()">Close</button>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
